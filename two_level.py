@@ -34,6 +34,18 @@ system.cpu.dcache = L1DCache()
 system.cpu.icache.connectCPU(system.cpu)
 system.cpu.dcache.connectCPU(system.cpu)
 
+# create the L2 bus
+system.l2bus = L2XBar()
+
+# connect the l2 bus with l1 caches
+system.cpu.icache.connectBus(system.l2bus)
+system.cpu.dcache.connectBus(system.l2bus)
+
+# instantiate L1 cache and connect with L2 bus and memory bus
+system.l2cache = L2Cache()
+system.l2cache.connectCPUSideBus(system.l2bus)
+system.l2cache.connectMemSideBus(system.membus)
+
 # x86 requirement to connect PIO and interrupt ports to mem bus
 system.cpu.createInterruptController()
 system.cpu.interrupts[0].pio = system.membus.master
