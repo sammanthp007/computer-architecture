@@ -8,6 +8,8 @@ Here we are modeling a system that has
 import m5
 from m5.objects import *
 
+from caches import *
+
 # instantiate the system we are simulating
 system = System()
 
@@ -24,9 +26,13 @@ system.mem_ranges = [AddrRange('512MB')]
 system.cpu = TimingSimpleCPU()
 system.membus = SystemXBar()
 
-# connect the i-cache and d-cache port to membus directly
-system.cpu.icache_port = system.membus.slave
-system.cpu.dcache_port = system.membus.slave
+# instantiate the L1 caches
+system.cpu.icache = L1ICache()
+system.cpu.dcache = L1DCache()
+
+# connect the cache to the CPU ports
+system.cpu.icache.connectCPU(system.cpu)
+system.cpu.dcache.connectCPU(system.cpu)
 
 # x86 requirement to connect PIO and interrupt ports to mem bus
 system.cpu.createInterruptController()
