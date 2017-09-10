@@ -8,7 +8,16 @@ Here we are modeling a system that has
 import m5
 from m5.objects import *
 
+from optparse import OptionParser
+
 from caches import *
+
+parser = OptionParser()
+parser.add_option('--l1i_size', help="L1 instruction cache size")
+parser.add_option('--l1d_size', help="L1 data cache size")
+parser.add_option('--l2_size', help="Unified L2 cache size")
+
+(options, args) = parser.parse_args()
 
 # instantiate the system we are simulating
 system = System()
@@ -27,8 +36,8 @@ system.cpu = TimingSimpleCPU()
 system.membus = SystemXBar()
 
 # instantiate the L1 caches
-system.cpu.icache = L1ICache()
-system.cpu.dcache = L1DCache()
+system.cpu.icache = L1ICache(options)
+system.cpu.dcache = L1DCache(options)
 
 # connect the cache to the CPU ports
 system.cpu.icache.connectCPU(system.cpu)
@@ -42,7 +51,7 @@ system.cpu.icache.connectBus(system.l2bus)
 system.cpu.dcache.connectBus(system.l2bus)
 
 # instantiate L1 cache and connect with L2 bus and memory bus
-system.l2cache = L2Cache()
+system.l2cache = L2Cache(options)
 system.l2cache.connectCPUSideBus(system.l2bus)
 system.l2cache.connectMemSideBus(system.membus)
 
