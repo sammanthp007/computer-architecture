@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 int NUM = 1000000;
 
@@ -10,7 +9,7 @@ int main() {
         prime[i] = 1;
     }
 
-	for (int i=2; i <= sqrt(NUM); i++) {
+	for (int i=2; i * i <= NUM; i++) {
         if (prime[i] == 1) {
             for (int j = i * i; j < NUM + 1; j = j + i) {
                 prime[j] = 0;
