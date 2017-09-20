@@ -43,7 +43,8 @@ system.mem_ctrl.port = system.membus.master
 
 # instantiate process that we will run
 process = Process()
-process.cmd = ['tests/test-progs/hello/bin/x86/linux/hello']
+#process.cmd = ['tests/test-progs/hello/bin/x86/linux/hello']
+process.cmd = ['configs/tutorial/test/sieve']
 
 # set the system to run the process
 system.cpu.workload = process
