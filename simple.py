@@ -11,7 +11,18 @@ from m5.objects import *
 from optparse import OptionParser
 
 parser = OptionParser()
-parser.add_option('--cpu_model', help="CPU Model. 1 - TimingSimpleCPU or 2 - MinorCPU")
+parser.add_option('--cpu_model', help="CPU Model. \n1 - TimingSimpleCPU \n2 - MinorCPU")
+
+parser.add_option('--use_cache', help="Bool to use cache or not. \n1 for yes. \nDefault is 0")
+parser.add_option('--l1i_size', help="L1 instruction cache size")
+parser.add_option('--l1i_assoc', help="L1 instruction cache associativity. Default is 1")
+parser.add_option('--l1d_size', help="L1 data cache size")
+parser.add_option('--l1d_assoc', help="L1 data cache associativity. Default is 1")
+parser.add_option('--l2_size', help="Unified L2 cache size")
+parser.add_option('--l2_assoc', help="Unified L2 cache associativity. Default is 1")
+
+parser.add_option('--mem_config', help="The memory. Default is DDR3_1600_8x8")
+
 
 (options, args) = parser.parse_args()
 
