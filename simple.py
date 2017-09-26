@@ -8,6 +8,7 @@ Here we are modeling a system that has
 import m5
 from m5.objects import *
 
+from caches import *
 from optparse import OptionParser
 
 parser = OptionParser()
@@ -38,17 +39,42 @@ system.clk_domain.voltage_domain = VoltageDomain()
 system.mem_mode = 'timing'
 system.mem_ranges = [AddrRange('512MB')]
 
-# instantiate the cpu and a system wide memory bus
+# instantiate the cpu
 if options and int(options.cpu_model) == 1:
     system.cpu = TimingSimpleCPU()
 elif options and int(options.cpu_model) == 2:
     system.cpu = MinorCPU()
 
+# instantiate a system wide memory bus
 system.membus = SystemXBar()
 
-# connect the i-cache and d-cache port to membus directly
-system.cpu.icache_port = system.membus.slave
-system.cpu.dcache_port = system.membus.slave
+# add cache if needed
+if options and options.use_cache:
+    # instantiate the L1 caches
+    system.cpu.icache = L1ICache(options)
+    system.cpu.dcache = L1DCache(options)
+
+    # connect the cache to the CPU ports
+    system.cpu.icache.connectCPU(system.cpu)
+    system.cpu.dcache.connectCPU(system.cpu)
+
+    # create the L2 bus
+    system.l2bus = L2XBar()
+
+    # connect the l2 bus with the l1 caches
+    system.cpu.icache.connectBus(system.l2bus)
+    system.cpu.dcache.connectBus(system.l2bus)
+
+    # create the unified l2 cache
+    system.l2cache = L2Cache(options)
+
+    # connect the l2 cache with membus and l2bus
+    system.l2cache.connectCPUSideBus(system.l2bus)
+    system.l2cache.connectMemSideBus(system.membus)
+else:
+    # connect the i-cache and d-cache port to membus directly
+    system.cpu.icache_port = system.membus.slave
+    system.cpu.dcache_port = system.membus.slave
 
 # x86 requirement to connect PIO and interrupt ports to mem bus
 system.cpu.createInterruptController()
@@ -68,7 +94,6 @@ system.mem_ctrl.port = system.membus.master
 
 # instantiate process that we will run
 process = Process()
-#process.cmd = ['tests/test-progs/hello/bin/x86/linux/hello']
 process.cmd = ['configs/tutorial/test/sieve']
 
 # set the system to run the process
