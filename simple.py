@@ -21,7 +21,7 @@ parser.add_option('--l1d_assoc', help="L1 data cache associativity. Default is 1
 parser.add_option('--l2_size', help="Unified L2 cache size")
 parser.add_option('--l2_assoc', help="Unified L2 cache associativity. Default is 1")
 
-parser.add_option('--mem_config', help="The memory. Default is DDR3_1600_8x8")
+parser.add_option('--mem_config', help="The memory. Default is DDR3_1600_8x8. \n You can find other options using build/X86/gem5.opt configs/example/fs.py --list-mem-types")
 
 
 (options, args) = parser.parse_args()
@@ -59,7 +59,10 @@ system.cpu.interrupts[0].int_slave = system.membus.master
 system.system_port = system.membus.slave
 
 # create a mem controller and connect it to membus
-system.mem_ctrl = DDR3_1600_8x8()
+if options and options.mem_config:
+    system.mem_ctrl = options.mem_config
+else:
+    system.mem_ctrl = DDR3_1600_8x8()
 system.mem_ctrl.range = system.mem_ranges[0]
 system.mem_ctrl.port = system.membus.master
 
