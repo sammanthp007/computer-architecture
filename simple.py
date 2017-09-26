@@ -21,7 +21,9 @@ system.mem_mode = 'timing'
 system.mem_ranges = [AddrRange('512MB')]
 
 # instantiate the cpu and a system wide memory bus
+
 system.cpu = TimingSimpleCPU()
+#system.cpu = MinorCPU()
 system.membus = SystemXBar()
 
 # connect the i-cache and d-cache port to membus directly
