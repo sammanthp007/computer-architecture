@@ -8,6 +8,13 @@ Here we are modeling a system that has
 import m5
 from m5.objects import *
 
+from optparse import OptionParser
+
+parser = OptionParser()
+parser.add_option('--cpu_model', help="CPU Model. 1 - TimingSimpleCPU or 2 - MinorCPU")
+
+(options, args) = parser.parse_args()
+
 # instantiate the system we are simulating
 system = System()
 
@@ -21,9 +28,11 @@ system.mem_mode = 'timing'
 system.mem_ranges = [AddrRange('512MB')]
 
 # instantiate the cpu and a system wide memory bus
+if options and int(options.cpu_model) == 1:
+    system.cpu = TimingSimpleCPU()
+elif options and int(options.cpu_model) == 2:
+    system.cpu = MinorCPU()
 
-system.cpu = TimingSimpleCPU()
-#system.cpu = MinorCPU()
 system.membus = SystemXBar()
 
 # connect the i-cache and d-cache port to membus directly
