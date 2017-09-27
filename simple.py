@@ -90,7 +90,10 @@ system.system_port = system.membus.slave
 
 # create a mem controller and connect it to membus
 if options and options.mem_config:
-    system.mem_ctrl = options.mem_config
+    if options.mem_config == "DDR3_2133_8x8":
+        system.mem_ctrl = DDR3_2133_8x8()
+    elif options.mem_config == "LPDDR2_S4_1066_1x32":
+        system.mem_ctrl = LPDDR2_S4_1066_1x32()
 else:
     system.mem_ctrl = DDR3_1600_8x8()
 system.mem_ctrl.range = system.mem_ranges[0]
