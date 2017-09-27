@@ -15,7 +15,7 @@ parser = OptionParser()
 parser.add_option('--cpu_model', help="CPU Model. \n1 - TimingSimpleCPU \n2 - MinorCPU")
 
 parser.add_option('--use_cache', help="Bool to use cache or not. \n1 for yes. \nDefault is 0")
-parser.add_option('--l1i_size', help="L1 instruction cache size")
+parser.add_option('--l1i_size', help="L1 instruction cache size. e.g 16kB")
 parser.add_option('--l1i_assoc', help="L1 instruction cache associativity. Default is 1")
 parser.add_option('--l1d_size', help="L1 data cache size")
 parser.add_option('--l1d_assoc', help="L1 data cache associativity. Default is 1")
@@ -24,6 +24,7 @@ parser.add_option('--l2_assoc', help="Unified L2 cache associativity. Default is
 
 parser.add_option('--mem_config', help="The memory. Default is DDR3_1600_8x8. \n You can find other options using build/X86/gem5.opt configs/example/fs.py --list-mem-types")
 
+parser.add_option('--clk_freq', help="CPU Clock Frequency. e.g 2GHz. Default is 1GHz")
 
 (options, args) = parser.parse_args()
 
@@ -32,7 +33,10 @@ system = System()
 
 # instantiate the system clock and set the time and voltage
 system.clk_domain = SrcClockDomain()
-system.clk_domain.clock = '1GHz'
+if options and options.clk_freq:
+    system.clk_domain.clock = options.clk_freq
+else:
+    system.clk_domain.clock = '1GHz'
 system.clk_domain.voltage_domain = VoltageDomain()
 
 # set the memory type and range
