@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # set up
-mkdir forsubmission_auto
+mkdir tmdforsubmission_auto
+touch timings.txt
 
 move_with_name()
 {
@@ -9,7 +10,7 @@ move_with_name()
 
     config_suffix="config.ini"
     stats_suffix="stats.txt"
-    submission_dir="forsubmission_auto"
+    submission_dir="tmdforsubmission_auto"
 
     from_loc_config="m5out/config.ini"
     from_loc_stats="m5out/stats.txt"
@@ -22,18 +23,33 @@ move_with_name()
 }
 
 # number 1
-build/X86/gem5.opt configs/tutorial/simple.py --cpu_model=1
+T="$(date +%s)"
+build/X86/gem5.opt configs/tutorial/tmdsimple.py --cpu_model=1
 move_with_name 1_simple_timingsimplecpu_
+T="$(($(date +%s)-T))"
+echo "1_simple_timingsimplecpu_" >> timings.txt
+echo "Time in seconds: ${T}" >> timings.txt
+echo "------------" >> timings.txt
 
 # number 2
-build/X86/gem5.opt configs/tutorial/simple.py --cpu_model=2
+T="$(date +%s)"
+build/X86/gem5.opt configs/tutorial/tmdsimple.py --cpu_model=2
 move_with_name 2_simple_minorcpu_
+T="$(($(date +%s)-T))"
+echo "2_simple_minorsimplecpu_" >> timings.txt
+echo "Time in seconds: ${T}" >> timings.txt
+echo "------------" >> timings.txt
 
 
 # number 3
+T="$(date +%s)"
 cache_for_3="--use_cache=1 --l1i_size=32kB --l1i_assoc=1 --l1d_size=64kB --l1d_assoc=1 --l2_size=4MB --l2_assoc=8"
-build/X86/gem5.opt configs/tutorial/simple.py --cpu_model=2 $cache_for_3
+build/X86/gem5.opt configs/tutorial/tmdsimple.py --cpu_model=2 $cache_for_3
 move_with_name 3_cached_minorcpu_
+T="$(($(date +%s)-T))"
+echo "3_cached_minorcpu_" >> timings.txt
+echo "Time in seconds: ${T}" >> timings.txt
+echo "------------" >> timings.txt
 
 # number 4
 number_4()
@@ -45,11 +61,21 @@ number_4()
 
     for i in '1GHz' '1.5GHz' '2GHz' '2.5GHz' '3GHz'
     do
-        build/X86/gem5.opt configs/tutorial/simple.py --cpu_model=1 --clk_freq=$i $configs
+        T="$(date +%s)"
+        build/X86/gem5.opt configs/tutorial/tmdsimple.py --cpu_model=1 --clk_freq=$i $configs
         cpu="timingcpu"
         move_with_name $nbr$undscr$mem_conf$undscr$cpu$undscr$i$undscr
+        T="$(($(date +%s)-T))"
+        echo "$nbr$undscr$mem_conf$undscr$cpu$undscr$i$undscr" >> timings.txt
+        echo "Time in seconds: ${T}" >> timings.txt
+        echo "------------" >> timings.txt
 
-        build/X86/gem5.opt configs/tutorial/simple.py --cpu_model=2 --clk_freq=$i $configs
+        T="$(date +%s)"
+        build/X86/gem5.opt configs/tutorial/tmdsimple.py --cpu_model=2 --clk_freq=$i $configs
+        T="$(($(date +%s)-T))"
+        echo "$nbr$undscr$mem_conf$undscr$cpu$undscr$i$undscr" >> timings.txt
+        echo "Time in seconds: ${T}" >> timings.txt
+        echo "------------" >> timings.txt
         cpu="minorcpu"
         move_with_name $nbr$undscr$mem_conf$undscr$cpu$undscr$i$undscr
     done
@@ -82,5 +108,5 @@ number_4_through_8()
 number_4_through_8
 
 # finally move to git repo
-rm -rf configs/tutorial/forsubmission_auto
-mv forsubmission_auto configs/tutorial/
+rm -rf configs/tutorial/tmdforsubmission_auto
+mv tmdforsubmission_auto configs/tutorial/

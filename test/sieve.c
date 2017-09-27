@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// int NUM = 1000000;
-int NUM = 1000;
+int NUM = 10000;
 
 int main() {
     int *prime; 
