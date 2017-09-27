@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// int NUM = 1000000;
-int NUM = 100;
+int NUM = 1000000;
 
 int main() {
     int *prime; 
     prime = malloc(sizeof(int) * NUM);
-    // int prime[NUM+1];
 
     for (int i = 2; i <= NUM; i++) {
         prime[i] = 1;
