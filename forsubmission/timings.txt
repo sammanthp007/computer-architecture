@@ -1,0 +1,369 @@
+1_simple_timingsimplecpu_
+Time in seconds: 170
+------------
+2_simple_minorsimplecpu_
+Time in seconds: 365
+------------
+3_cached_minorcpu_
+Time in seconds: 197
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 165
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 358
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 164
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 362
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 165
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 359
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 165
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 355
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 167
+------------
+4_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 356
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 41
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 197
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 195
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 193
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 196
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 193
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 41
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 194
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 40
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 196
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 41
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 195
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 40
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 195
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 40
+------------
+6_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 197
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 40
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+Time in seconds: 197
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 40
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+Time in seconds: 197
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 40
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+Time in seconds: 198
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 40
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+Time in seconds: 196
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 40
+------------
+7_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+Time in seconds: 197
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 166
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 356
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 167
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 361
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 165
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 360
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 164
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 354
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 164
+------------
+4_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 356
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 194
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 194
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 196
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 193
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 40
+------------
+5_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 194
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 41
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 197
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 41
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 196
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 41
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 200
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 40
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 196
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 40
+------------
+6_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 197
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 41
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_1GHz_
+Time in seconds: 198
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 40
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_1.5GHz_
+Time in seconds: 196
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 40
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_2GHz_
+Time in seconds: 195
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 44
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_2.5GHz_
+Time in seconds: 195
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 45
+------------
+7_--mem_config=DDR3_2133_8x8_timingcpu_3GHz_
+Time in seconds: 219
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 184
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 398
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 173
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 390
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 176
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 418
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 195
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 420
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 176
+------------
+4_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 423
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 44
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 229
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 49
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 212
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 46
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 231
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 49
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 221
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 46
+------------
+5_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 226
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 45
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 220
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 46
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 228
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 44
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 219
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 45
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 213
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 46
+------------
+6_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 220
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 45
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1GHz_
+Time in seconds: 216
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 43
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_1.5GHz_
+Time in seconds: 215
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 45
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2GHz_
+Time in seconds: 214
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 40
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_2.5GHz_
+Time in seconds: 196
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 41
+------------
+7_--mem_config=LPDDR2_S4_1066_1x32_timingcpu_3GHz_
+Time in seconds: 195
+------------
