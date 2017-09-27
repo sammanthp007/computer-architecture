@@ -73,10 +73,10 @@ number_4()
         T="$(date +%s)"
         build/X86/gem5.opt configs/tutorial/tmdsimple.py --cpu_model=2 --clk_freq=$i $configs
         T="$(($(date +%s)-T))"
+        cpu="minorcpu"
         echo "$nbr$undscr$mem_conf$undscr$cpu$undscr$i$undscr" >> timings.txt
         echo "Time in seconds: ${T}" >> timings.txt
         echo "------------" >> timings.txt
-        cpu="minorcpu"
         move_with_name $nbr$undscr$mem_conf$undscr$cpu$undscr$i$undscr
     done
 }
@@ -110,3 +110,4 @@ number_4_through_8
 # finally move to git repo
 rm -rf configs/tutorial/tmdforsubmission_auto
 mv tmdforsubmission_auto configs/tutorial/
+mv timings.txt configs/tutorial/forsubmission/
