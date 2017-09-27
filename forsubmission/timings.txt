@@ -10,31 +10,31 @@ Time in seconds: 197
 4_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
 Time in seconds: 165
 ------------
-4_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
+4_--mem_config=DDR3_1600_8x8_minorcpu_1GHz_
 Time in seconds: 358
 ------------
 4_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
 Time in seconds: 164
 ------------
-4_--mem_config=DDR3_1600_8x8_timingcpu_1.5GHz_
+4_--mem_config=DDR3_1600_8x8_minorcpu_1.5GHz_
 Time in seconds: 362
 ------------
 4_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
 Time in seconds: 165
 ------------
-4_--mem_config=DDR3_1600_8x8_timingcpu_2GHz_
+4_--mem_config=DDR3_1600_8x8_minorcpu_2GHz_
 Time in seconds: 359
 ------------
 4_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
 Time in seconds: 165
 ------------
-4_--mem_config=DDR3_1600_8x8_timingcpu_2.5GHz_
+4_--mem_config=DDR3_1600_8x8_minorcpu_2.5GHz_
 Time in seconds: 355
 ------------
 4_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
 Time in seconds: 167
 ------------
-4_--mem_config=DDR3_1600_8x8_timingcpu_3GHz_
+4_--mem_config=DDR3_1600_8x8_minorcpu_3GHz_
 Time in seconds: 356
 ------------
 5_--mem_config=DDR3_1600_8x8_timingcpu_1GHz_
