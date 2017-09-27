@@ -44,9 +44,9 @@ system.mem_mode = 'timing'
 system.mem_ranges = [AddrRange('512MB')]
 
 # instantiate the cpu
-if options and int(options.cpu_model) == 1:
+if options and options.cpu_model == '1':
     system.cpu = TimingSimpleCPU()
-elif options and int(options.cpu_model) == 2:
+elif options and options.cpu_model == '2':
     system.cpu = MinorCPU()
 
 # instantiate a system wide memory bus
